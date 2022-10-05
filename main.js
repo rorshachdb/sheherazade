@@ -14,7 +14,7 @@ function createWindow() {
     show: false,
     frame: true,
 
-    titleBarStyle: 'hidden',
+    // titleBarStyle: 'hidden',
     webPreferences: {
       nodeIntegration: true,
       preload: path.join(__dirname, 'electron-src','preload.js')
