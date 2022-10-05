@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./shz.component.css']
 })
 export class ShzComponent {
-  title = 'Sheherazade';
+
 }
