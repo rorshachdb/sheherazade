@@ -5,6 +5,8 @@ const path = require('path')
 const url = require('url');
 
 const args = process.argv.slice(1);
+console.log("START ARGUMENT")
+console.log(args)
 isToolsDev = args.some(val => val === '--devTools');
 
 function createWindow() {
