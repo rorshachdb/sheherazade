@@ -10,6 +10,7 @@
     "electron-build": "electron-builder build --linux AppImage",
     "ng-serve": "ng serve",
     "ng-build": "ng build",
+    "start-win": "concurrently -k \"yarn run ng-serve\" \"yarn run electron-serve\"",
     "start": "DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0 LIBGL_ALWAYS_INDIRECT=true concurrently -k \"yarn run ng-serve\" \"yarn run electron-serve\"",
     "build": "yarn run clean && yarn run ng-build && yarn run electron-build",
     "watch": "ng build --watch --configuration development",
