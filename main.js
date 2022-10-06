@@ -5,7 +5,7 @@ const path = require('path')
 const url = require('url');
 
 const args = process.argv.slice(1);
-console.log("START ARGUMENT")
+console.log("STARTING ARGUMENTS")
 console.log(args)
 isToolsDev = args.some(val => val === '--devTools');
 
@@ -27,7 +27,7 @@ function createWindow() {
     require('electron-reload')(__dirname, {
       electron: require(`${__dirname}/node_modules/electron`),
       hardResetMethod: 'exit',
-      argv: ['--devTools']
+      electronArgv: ['--devTools']
     });
     win.loadURL('http://localhost:4200/')
     win.webContents.openDevTools()
